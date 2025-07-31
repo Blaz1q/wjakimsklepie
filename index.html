@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO: informacje dla robota -->
+  <meta name="description" content="wjakimsklepie — wyszukiwarka promocji w sklepach takich jak Biedronka i Carrefour. Sprawdź, gdzie kupisz najtaniej!">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Twoje Imię lub nazwa projektu">
+  <meta name="keywords" content="promocje, biedronka, carrefour, gdzie taniej, sklep, zakupy, wyszukiwarka, produkty, gazetki, w jakim sklepie">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>wjakimsklepie — wyszukiwarka promocji</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="banner">
+  <img src="wjakimsklepielogo.png" style="width:240px; margin-top:auto;" alt="wjakimsklepie">
+  <p>Sprawdź w-jakim-sklepie jest najtaniej!</p>
+  
+</header>
+<div class="reklama-prawo">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5519052361423402"
+     crossorigin="anonymous"></script>
+<!-- wjakimsklepie-prawo -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5519052361423402"
+     data-ad-slot="8953093419"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="container">
+  <div class="banner-search">
+    <input type="text" class="icon-rtl" id="search-input" onchange="szukaj()" placeholder="Wpisz nazwę produktu..." />
+    <button id="search-button" onclick="szukaj()">Szukaj</button>
+  </div>
+    <div class="filtry">
+  <h2>Filtry sklepów:</h2>
+  <div class="checkbox-group">
+    <label class="checkbox-button">
+      <input type="checkbox" id="checkbox-biedronka" onchange="szukaj()" checked>
+      Biedronka
+    </label>
+    <label class="checkbox-button">
+      <input type="checkbox" id="checkbox-carrefour" onchange="szukaj()" checked>
+      Carrefour
+    </label>
+    <label class="checkbox-button">
+      <input type="checkbox" id="checkbox-auchan" onchange="szukaj()" checked>
+      Auchan
+    </label>
+    <label class="checkbox-button">
+      <input type="checkbox" id="checkbox-stokrotka" onchange="szukaj()" checked>
+      Stokrotka
+    </label>
+  </div>
+  <div class="select-limit">
+  <label for="limit-select">Ilość produktów:</label>
+  <select id="limit-select" onchange="szukaj()">
+    <option value="10">10</option>
+    <option value="25">25</option>
+    <option value="50">50</option>
+    <option value="all">Wszystkie</option>
+  </select>
+</div>
+</div>
+
+    <div id="search-result" class="product-grid"></div>
+    <div id="search-error">
+
+    </div>
+  </div>
+</div>
+  <script type="module" src="search.js"></script>
+  <div class="reklama-dol">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5519052361423402"
+     crossorigin="anonymous"></script>
+<!-- wjakisklepie-dol -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5519052361423402"
+     data-ad-slot="5832106058"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  </div>
+</body>
+</html>
