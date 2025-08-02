@@ -141,12 +141,6 @@ body {
   user-select: none;
 }
 
-.checkbox-button input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
 .checkbox-button input[type="checkbox"]:checked + * {
   background-color: #f1c40f;
   color: #000;
@@ -257,6 +251,115 @@ body {
   width: 90%;
   margin:auto;
   z-index: 1000;
+  background-color: white;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border: 2px solid #f1c40f;
+  border-radius: 6px;
+  background-color: white;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.dropdown-arrow {
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+}
+.dropdown-toggle:hover {
+  background-color: #fffbea;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  border: 1px solid #f1c40f;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 10px;
+}
+
+.dropdown-menu.show {
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+}
+
+.master-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #8F7300;
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: white;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s ease-in-out;
+}
+
+.master-checkbox:checked {
+  background-color: #8F7300;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' fill='none' d='M1 5l3 3 7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+}
+
+
+/* Zachowanie stylu checkboxów */
+.dropdown-menu .checkbox-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+  user-select: none;
+}
+
+.dropdown-menu .checkbox-button:hover {
+  background-color: #fffbea;
+}
+
+
+/* Checkbox z wyraźną ramką */
+.dropdown-menu .checkbox-button input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #8F7300; /* ciemniejsza ramka dla lepszej widoczności */
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s ease-in-out;
+}
+
+/* Po zaznaczeniu */
+.dropdown-menu .checkbox-button input[type="checkbox"]:checked {
+  background-color: #8F7300;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' fill='none' d='M1 5l3 3 7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
 }
 /* Opcjonalnie: ukryj reklamę na małych ekranach */
 @media (max-width: 768px) {
