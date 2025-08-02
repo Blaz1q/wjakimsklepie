@@ -4,8 +4,15 @@ let wszystkieProdukty = [];
 
 let result_elem = document.getElementById("search-result");
 let sklepy_spozywcze = ["biedronka","carrefour","auchan","stokrotka"];
-let drogerie = ["rossmann"];
-
+let drogerie = ["rossmann","hebe"];
+const colorMap = {
+  biedronka: 'red',
+  carrefour: 'blue',
+  hebe: 'deeppink',
+  stokrotka: 'green',
+  auchan: 'darkgreen',
+  rossmann: '#ff002fff',
+};
 function generateCheckbox() {
   const container = document.querySelector(".checkbox-group");
   container.innerHTML = ""; // wyczyść stare
@@ -157,7 +164,7 @@ function szukaj() {
   }
 
   result_elem.innerHTML = "";
-  produkty.forEach(produkt => result_elem.append(produkt.render()));
+  produkty.forEach(produkt => result_elem.append(produkt.render(colorMap)));
 
   err.innerHTML = produkty.length === 0 ? "Brak produktów :(" : "";
 }
