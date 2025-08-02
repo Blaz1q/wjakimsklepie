@@ -4,7 +4,7 @@ let wszystkieProdukty = [];
 
 let result_elem = document.getElementById("search-result");
 let sklepy_spozywcze = ["biedronka","carrefour","auchan","stokrotka"];
-let drogerie = ["rossmann","hebe"];
+let drogerie = ["rossmann"]; //hebe nie działa jeszcze :(
 const colorMap = {
   biedronka: 'red',
   carrefour: 'blue',
@@ -185,4 +185,5 @@ function wyszukajProduktyFraza(tekst) {
     return slowa.every(slowo => nazwa.includes(slowo));
   });
 }
+
 window.szukaj = szukaj;
