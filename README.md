@@ -1,5 +1,5 @@
 ![alt text](https://github.com/Blaz1q/wjakimsklepie/blob/main/wjakimsklepielogo.png)
-sprawdź w-jakim-sklepie jest najtaniej!
+sprawdź w jakim sklepie jest najtaniej!
 
 # 🛒 wjakimsklepie – Porównywarka cen w sklepach
 
