@@ -18,13 +18,6 @@ body {
 }
 
 .banner h1 {
-  margin: 0;
-  font-size: 2em;
-  color: #2d3436;
-  letter-spacing: 1px;
-}
-
-.banner p {
   margin-top: 10px;
   font-size: 1.1em;
   color: #636e72;
